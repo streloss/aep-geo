@@ -8,7 +8,7 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: #f5f7fa;
+    background: #f0f4f8;
     color: #1a1a1a;
     line-height: 1.6;
     padding: 12px;
@@ -16,13 +16,13 @@
   }
   .card {
     background: #fff;
-    border-radius: 14px;
-    padding: 16px;
-    margin-bottom: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border-radius: 16px;
+    padding: 18px;
+    margin-bottom: 14px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.07);
   }
   h1 {
-    font-size: 22px;
+    font-size: 24px;
     text-align: center;
     margin-bottom: 4px;
     color: #1a1a1a;
@@ -31,32 +31,32 @@
     text-align: center;
     color: #666;
     font-size: 13px;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
   }
   h2 {
-    font-size: 17px;
+    font-size: 18px;
     color: #2563eb;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
   }
   .tag {
     display: inline-block;
     background: #eff6ff;
     color: #2563eb;
-    padding: 3px 10px;
+    padding: 4px 12px;
     border-radius: 20px;
     font-size: 12px;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
   ul {
     list-style: none;
     padding-left: 0;
   }
   li {
-    padding: 6px 0;
+    padding: 7px 0;
     border-bottom: 1px solid #f0f0f0;
     font-size: 15px;
   }
@@ -76,13 +76,13 @@
   .number {
     background: #2563eb;
     color: #fff;
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
     margin-right: 6px;
   }
@@ -105,8 +105,8 @@
   .fact {
     background: #f0fdf4;
     border-left: 3px solid #22c55e;
-    padding: 10px;
-    border-radius: 0 8px 8px 0;
+    padding: 12px;
+    border-radius: 0 10px 10px 0;
     margin-top: 10px;
     font-size: 14px;
     color: #166534;
@@ -114,11 +114,28 @@
   .danger {
     background: #fef2f2;
     border-left: 3px solid #ef4444;
-    padding: 10px;
-    border-radius: 0 8px 8px 0;
+    padding: 12px;
+    border-radius: 0 10px 10px 0;
     margin-top: 10px;
     font-size: 14px;
     color: #991b1b;
+  }
+  .question {
+    background: #eff6ff;
+    border-left: 3px solid #2563eb;
+    padding: 12px;
+    border-radius: 0 10px 10px 0;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #1e3a8a;
+  }
+  .q {
+    font-weight: 700;
+    color: #1e40af;
+    margin-bottom: 4px;
+  }
+  .a {
+    color: #374151;
   }
   .footer {
     text-align: center;
@@ -127,17 +144,34 @@
     margin-top: 20px;
     padding-bottom: 20px;
   }
+  .scheme {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 14px;
+    font-family: monospace;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 10px 0;
+    overflow-x: auto;
+    color: #334155;
+  }
+  .scheme-step {
+    background: #e0f2fe;
+    border-radius: 6px;
+    padding: 2px 6px;
+    font-weight: 600;
+  }
 </style>
 </head>
 <body>
 
   <div class="card">
     <h1>⚛️ Атомная электростанция</h1>
-    <div class="subtitle">Шпаргалка по географии · 2026</div>
+    <div class="subtitle">Шпаргалка по географии · 2026 · Для пересказа и вопросов</div>
   </div>
 
   <div class="card">
-    <h2>📌 Введение</h2>
+    <h2>📌 Введение (тезисы)</h2>
     <ul>
       <li>В мире <span class="highlight">438 реакторов</span> в 32 странах</li>
       <li>Суммарная мощность: <span class="highlight">390+ ГВт</span></li>
@@ -147,22 +181,38 @@
   </div>
 
   <div class="card">
-    <h2>⚙️ Принцип работы</h2>
-    <span class="tag">Цепочка</span>
-    <ul>
-      <li><span class="number">1</span>Реактор → деление U-235/Pu</li>
-      <li><span class="number">2</span>Теплообменник → пар</li>
-      <li><span class="number">3</span>Турбина → генератор → ⚡ электричество</li>
-      <li><span class="number">4</span>Конденсатор → охлаждение водой</li>
-    </ul>
+    <h2>⚙️ 1. Принцип работы АЭС</h2>
+    <span class="tag">Схема для пересказа</span>
+    <div class="scheme">
+      <span class="scheme-step">⚛️ Реактор</span> (деление U-235/Pu)
+         ↓ тепло
+      <span class="scheme-step">💧 Теплообменник</span> → пар
+         ↓ пар
+      <span class="scheme-step">⚙️ Турбина</span> → вращение
+         ↓
+      <span class="scheme-step">🔌 Генератор</span> → ⚡ электричество
+         ↓
+      <span class="scheme-step">❄️ Конденсатор</span> (охлаждение водой)
+         ↓
+      💧 Вода возвращается в контур
+    </div>
+
+    <span class="tag">Типы реакторов</span>
+    <table>
+      <tr><th>Тип</th><th>Аббр.</th><th>Где</th></tr>
+      <tr><td>С водой под давлением</td><td>PWR / ВВЭР</td><td>Россия, Франция, Китай</td></tr>
+      <tr><td>Кипящий водяной</td><td>BWR</td><td>США, Япония</td></tr>
+      <tr><td>Быстрые нейтроны</td><td>БН</td><td>Россия (Белоярская)</td></tr>
+      <tr><td>Газографитовый</td><td>РБМК</td><td>РФ, Украина (Чернобыль)</td></tr>
+    </table>
     <div class="fact">
-      💡 Типы реакторов: PWR/BWR (вода под давлением) и БН (быстрые нейтроны)
+      💡 ВВЭР-1200 — самые безопасные; строятся в России, Турции, Индии, Иране
     </div>
   </div>
 
   <div class="card">
-    <h2>🌍 География АЭС в мире</h2>
-    <span class="tag">Топ-5 стран</span>
+    <h2>🌍 2. География АЭС в мире</h2>
+    <span class="tag">Топ стран</span>
     <table>
       <tr><th>Страна</th><th>Реакторы</th><th>Доля</th></tr>
       <tr><td>🇺🇸 США</td><td>93</td><td>~19%</td></tr>
@@ -170,82 +220,150 @@
       <tr><td>🇨🇳 Китай</td><td>55</td><td>~5%</td></tr>
       <tr><td>🇷🇺 Россия</td><td>37</td><td>~20%</td></tr>
       <tr><td>🇯🇵 Япония</td><td>33</td><td>~6%</td></tr>
+      <tr><td>🇰🇷 Южная Корея</td><td>25</td><td>~30%</td></tr>
     </table>
-    <div class="fact">
-      🌏 Регионы: Европа — высокая доля; Азия — быстрый рост; Африка — только ЮАР
-    </div>
+
+    <span class="tag">Регионы</span>
+    <table>
+      <tr><th>Регион</th><th>Тренд</th><th>Примеры</th></tr>
+      <tr><td>🇪🇺 Европа</td><td>Стагнация / выход</td><td>Франция ~70%, Германия закрывает</td></tr>
+      <tr><td>🇨🇳 Азия</td><td>Быстрый рост</td><td>Китай строит 20+ новых</td></tr>
+      <tr><td>🇺🇸 С. Америка</td><td>Старение парка</td><td>США 93 реактора</td></tr>
+      <tr><td>🌍 Африка</td><td>Первые проекты</td><td>ЮАР (Коberg)</td></tr>
+    </table>
   </div>
 
   <div class="card">
-    <h2>📍 Факторы размещения</h2>
-    <span class="tag">Природные</span>
-    <ul>
-      <li>Водные ресурсы (охлаждение)</li>
-      <li>Сейсмическая стабильность (&lt;0,3–0,5g)</li>
-      <li>Ровный рельеф, без оползней</li>
-    </ul>
-    <span class="tag">Экономические</span>
-    <ul>
-      <li>Близость к городам и промышленности</li>
-      <li>ЛЭП, транспортная доступность</li>
-      <li>Зона отчуждения: 3–5 км</li>
-    </ul>
+    <h2>📍 3. Факторы размещения</h2>
+    <span class="tag">Запомни: 3 группы</span>
+    <table>
+      <tr><th>Группа</th><th>Фактор</th><th>Требование</th></tr>
+      <tr><td rowspan="4">🌊 Природные</td><td>Вода</td><td>Река / море (охлаждение)</td></tr>
+      <tr><td>Сейсмика</td><td>&lt; 0,3–0,5g</td></tr>
+      <tr><td>Рельеф</td><td>Ровный, без оползней</td></tr>
+      <tr><td>Климат</td><td>Умеренный</td></tr>
+      <tr><td rowspan="3">🏭 Экономические</td><td>Потребители</td><td>Близость к городам</td></tr>
+      <tr><td>Инфраструктура</td><td>ЛЭП, ЖД, дороги</td></tr>
+      <tr><td>Кадры</td><td>Квалифицированные специалисты</td></tr>
+      <tr><td rowspan="2">🏘️ Социальные</td><td>Зона отчуждения</td><td>3–5 км без застройки</td></tr>
+      <tr><td>Мнение жителей</td><td>Принятие населением</td></tr>
+    </table>
     <div class="danger">
-      ⚠️ 80% АЭС у рек/морей — из-за необходимости охлаждения
+      ⚠️ 80% АЭС у рек/морей — из-за охлаждения!
     </div>
   </div>
 
   <div class="card">
-    <h2>🇷🇺 АЭС в России</h2>
+    <h2>🇷🇺 4. АЭС в России</h2>
     <span class="tag">4-е место в мире</span>
-    <ul>
-      <li><b>Балтийская</b> — Калининград (1100 МВт)</li>
-      <li><b>Белоярская</b> — Свердловская обл. (БН-реакторы)</li>
-      <li><b>Билибинская</b> — Чукотка (самая северная!)</li>
-      <li><b>Калининская</b> — Тверская обл. (4000 МВт)</li>
-      <li><b>Кольская</b> — Мурманская обл.</li>
-      <li><b>Курская</b> — 4 блока РБМК-1000</li>
-      <li><b>Ленинградская</b> — 4 блока ВВЭР-1200</li>
-      <li><b>Нововоронежская</b> — первенец ВВЭР</li>
-      <li><b>Ростовская</b> — 4033 МВт</li>
-      <li><b>Смоленская</b> — 3 блока РБМК</li>
-    </ul>
+    <table>
+      <tr><th>АЭС</th><th>Регион</th><th>Мощность</th><th>Особенность</th></tr>
+      <tr><td>Балтийская</td><td>Калининград</td><td>1100</td><td>Единственная в регионе</td></tr>
+      <tr><td>Белоярская</td><td>Свердловская</td><td>1480</td><td>БН-реакторы</td></tr>
+      <tr><td>Билибинская</td><td>Чукотка</td><td>48</td><td>Самая северная!</td></tr>
+      <tr><td>Калининская</td><td>Тверская</td><td>4000</td><td>4× ВВЭР-1000</td></tr>
+      <tr><td>Кольская</td><td>Мурманская</td><td>1760</td><td>Север</td></tr>
+      <tr><td>Курская</td><td>Курская</td><td>4000</td><td>4× РБМК-1000</td></tr>
+      <tr><td>Ленинградская</td><td>Лен. обл.</td><td>4200</td><td>4× ВВЭР-1200</td></tr>
+      <tr><td>Нововоронежская</td><td>Воронежская</td><td>2773</td><td>Первенец ВВЭР</td></tr>
+      <tr><td>Ростовская</td><td>Ростовская</td><td>4033</td><td>4× ВВЭР-1000</td></tr>
+      <tr><td>Смоленская</td><td>Смоленская</td><td>3000</td><td>3× РБМК-1000</td></tr>
+    </table>
     <div class="fact">
       🏗️ Строятся: Курская АЭС-2, Ленинградская АЭС-2, Белорусская АЭС
     </div>
   </div>
 
   <div class="card">
-    <h2>🌱 Экология и безопасность</h2>
-    <span class="tag">Плюсы</span>
-    <ul>
-      <li>Низкие выбросы CO₂</li>
-      <li>Компактность (большая мощность на малой площади)</li>
-      <li>Независимость от погоды (в отличие от ВИЭ)</li>
-    </ul>
-    <span class="tag">Минусы / Риски</span>
-    <ul>
-      <li>Радиоактивные отходы (хранение)</li>
-      <li>Аварийный риск: Чернобыль (1986), Фукусима (2011)</li>
-      <li>Тепловое загрязнение водоёмов</li>
-    </ul>
-    <div class="fact">
-      📊 После Фукусимы Германия отказалась от АЭС, а Франция сохранила как базовую
-    </div>
+    <h2>🌱 5. Экология и безопасность</h2>
+    <span class="tag">Плюсы vs Минусы</span>
+    <table>
+      <tr><th>Аспект</th><th>✅ Плюс</th><th>❌ Минус</th></tr>
+      <tr><td>CO₂</td><td>~0 г/кВт·ч</td><td>—</td></tr>
+      <tr><td>Площадь</td><td>1 км² ≈ 2000 МВт</td><td>—</td></tr>
+      <tr><td>Стабильность</td><td>24/7, не зависит от погоды</td><td>—</td></tr>
+      <tr><td>Отходы</td><td>Малый объём</td><td>Хранение 10 000+ лет</td></tr>
+      <tr><td>Риск</td><td>ВВЭР-1200 — пассивная безопасность</td><td>Чернобыль, Фукусима</td></tr>
+      <tr><td>Тепло</td><td>—</td><td>Загрязнение водоёмов</td></tr>
+      <tr><td>Цена</td><td>Дешёвый уран</td><td>Дорогое строительство</td></tr>
+    </table>
+
+    <span class="tag">Крупнейшие аварии</span>
+    <table>
+      <tr><th>Авария</th><th>Год</th><th>Причина</th><th>Последствия</th></tr>
+      <tr><td>Чернобыль</td><td>1986</td><td>Взрыв РБМК</td><td>30 км зона, 300 000+ эвакуированы</td></tr>
+      <tr><td>Фукусима</td><td>2011</td><td>Цунами</td><td>Германия отказалась от АЭС</td></tr>
+      <tr><td>Три-Майл-Айленд</td><td>1979</td><td>Отказ оборудования</td><td>Без жертв</td></tr>
+    </table>
   </div>
 
   <div class="card">
     <h2>📝 Заключение (тезисы для ответа)</h2>
     <ul>
-      <li>АЭС — важный элемент глобальной энергетики (~10% мировой энергии)</li>
+      <li>АЭС — ~10% мировой энергии, 438 реакторов в 32 странах</li>
       <li>Размещение у водоёмов, в сейсмически спокойных зонах</li>
-      <li>Россия — 4-е место, развитие ВВЭР и БН-технологий</li>
+      <li>Россия — 4-е место, развитие ВВЭР и БН</li>
       <li>Экологический компромисс: низкий CO₂ vs риски и отходы</li>
+      <li>Тренды: Европа выходит, Азия строит, Россия экспортирует технологии</li>
     </ul>
   </div>
 
+  <div class="card">
+    <h2>❓ Вопросы и ответы (для экзамена)</h2>
+
+    <div class="question">
+      <div class="q">Q: Почему АЭС строят у водоёмов?</div>
+      <div class="a">A: Для охлаждения реактора и конденсации пара в конденсаторе. 80% АЭС у рек/морей.</div>
+    </div>
+
+    <div class="question">
+      <div class="q">Q: Какие факторы влияют на размещение АЭС?</div>
+      <div class="a">A: Природные (вода, сейсмика, рельеф), экономические (потребители, инфраструктура), социальные (зона отчуждения 3–5 км).</div>
+    </div>
+
+    <div class="question">
+      <div class="q">Q: Какие страны лидируют по АЭС?</div>
+      <div class="a">A: США (93), Франция (56, ~70% энергии), Китай (55, строит больше всех), Россия (37).</div>
+    </div>
+
+    <div class="question">
+      <div class="q">Q: Почему Франция держится на АЭС, а Германия отказывается?</div>
+      <div class="a">A: Франция: ~70% энергии от АЭС, нет альтернативы. Германия: после Фукусимы (2011) решила о закрытии.</div>
+    </div>
+
+    <div class="question">
+      <div class="q">Q: Какие типы реакторов используются в России?</div>
+      <div class="a">A: ВВЭР (водо-водяной, основной), РБМК (графитовый, Чернобыльский тип), БН (быстрые нейтроны, Белоярская).</div>
+    </div>
+
+    <div class="question">
+      <div class="q">Q: Плюсы и минусы атомной энергетики?</div>
+      <div class="a">A: Плюсы: низкие выбросы CO₂, компактность, стабильность. Минусы: радиоактивные отходы, аварийный риск, тепловое загрязнение.</div>
+    </div>
+
+    <div class="question">
+      <div class="q">Q: Какое место занимает Россия в мировой атомной энергетике?</div>
+      <div class="a">A: 4-е место по числу реакторов (37), экспорт технологий (ВВЭР-1200), строительство АЭС за рубежом (Турция, Индия, Иран, Беларусь).</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🔢 Цифры на память</h2>
+    <table>
+      <tr><th>Показатель</th><th>Значение</th></tr>
+      <tr><td>Реакторов в мире</td><td><span class="highlight">438</span></td></tr>
+      <tr><td>Стран с АЭС</td><td><span class="highlight">32</span></td></tr>
+      <tr><td>Мощность мировая</td><td><span class="highlight">390+ ГВт</span></td></tr>
+      <tr><td>Доля в энергии</td><td><span class="highlight">~10%</span></td></tr>
+      <tr><td>Реакторов в РФ</td><td><span class="highlight">37</span></td></tr>
+      <tr><td>Зона отчуждения</td><td><span class="highlight">3–5 км</span></td></tr>
+      <tr><td>Франция (доля)</td><td><span class="highlight">~70%</span></td></tr>
+      <tr><td>США (реакторы)</td><td><span class="highlight">93</span></td></tr>
+    </table>
+  </div>
+
   <div class="footer">
-    Шпаргалка по географии · АЭС · 2026
+    Шпаргалка по географии · АЭС · 2026 · Удачи на экзамене!
   </div>
 
 </body>
