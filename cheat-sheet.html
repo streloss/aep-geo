@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Шпаргалка: АЭС (География)</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f5f7fa;
+    color: #1a1a1a;
+    line-height: 1.6;
+    padding: 12px;
+    font-size: 16px;
+  }
+  .card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+  h1 {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 4px;
+    color: #1a1a1a;
+  }
+  .subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+  h2 {
+    font-size: 17px;
+    color: #2563eb;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .tag {
+    display: inline-block;
+    background: #eff6ff;
+    color: #2563eb;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  li {
+    padding: 6px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 15px;
+  }
+  li:last-child { border-bottom: none; }
+  li::before {
+    content: "•";
+    color: #2563eb;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  .highlight {
+    background: #fef3c7;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  .number {
+    background: #2563eb;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 6px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-top: 8px;
+  }
+  th, td {
+    border: 1px solid #e5e7eb;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background: #f9fafb;
+    font-weight: 600;
+  }
+  tr:nth-child(even) { background: #f9fafb; }
+  .fact {
+    background: #f0fdf4;
+    border-left: 3px solid #22c55e;
+    padding: 10px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #166534;
+  }
+  .danger {
+    background: #fef2f2;
+    border-left: 3px solid #ef4444;
+    padding: 10px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #991b1b;
+  }
+  .footer {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 12px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>⚛️ Атомная электростанция</h1>
+    <div class="subtitle">Шпаргалка по географии · 2026</div>
+  </div>
+
+  <div class="card">
+    <h2>📌 Введение</h2>
+    <ul>
+      <li>В мире <span class="highlight">438 реакторов</span> в 32 странах</li>
+      <li>Суммарная мощность: <span class="highlight">390+ ГВт</span></li>
+      <li>Доля в мировой энергетике: <span class="highlight">~10%</span></li>
+      <li>Цель: энергобезопасность, снижение выбросов CO₂</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>⚙️ Принцип работы</h2>
+    <span class="tag">Цепочка</span>
+    <ul>
+      <li><span class="number">1</span>Реактор → деление U-235/Pu</li>
+      <li><span class="number">2</span>Теплообменник → пар</li>
+      <li><span class="number">3</span>Турбина → генератор → ⚡ электричество</li>
+      <li><span class="number">4</span>Конденсатор → охлаждение водой</li>
+    </ul>
+    <div class="fact">
+      💡 Типы реакторов: PWR/BWR (вода под давлением) и БН (быстрые нейтроны)
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🌍 География АЭС в мире</h2>
+    <span class="tag">Топ-5 стран</span>
+    <table>
+      <tr><th>Страна</th><th>Реакторы</th><th>Доля</th></tr>
+      <tr><td>🇺🇸 США</td><td>93</td><td>~19%</td></tr>
+      <tr><td>🇫🇷 Франция</td><td>56</td><td>~70%</td></tr>
+      <tr><td>🇨🇳 Китай</td><td>55</td><td>~5%</td></tr>
+      <tr><td>🇷🇺 Россия</td><td>37</td><td>~20%</td></tr>
+      <tr><td>🇯🇵 Япония</td><td>33</td><td>~6%</td></tr>
+    </table>
+    <div class="fact">
+      🌏 Регионы: Европа — высокая доля; Азия — быстрый рост; Африка — только ЮАР
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📍 Факторы размещения</h2>
+    <span class="tag">Природные</span>
+    <ul>
+      <li>Водные ресурсы (охлаждение)</li>
+      <li>Сейсмическая стабильность (&lt;0,3–0,5g)</li>
+      <li>Ровный рельеф, без оползней</li>
+    </ul>
+    <span class="tag">Экономические</span>
+    <ul>
+      <li>Близость к городам и промышленности</li>
+      <li>ЛЭП, транспортная доступность</li>
+      <li>Зона отчуждения: 3–5 км</li>
+    </ul>
+    <div class="danger">
+      ⚠️ 80% АЭС у рек/морей — из-за необходимости охлаждения
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🇷🇺 АЭС в России</h2>
+    <span class="tag">4-е место в мире</span>
+    <ul>
+      <li><b>Балтийская</b> — Калининград (1100 МВт)</li>
+      <li><b>Белоярская</b> — Свердловская обл. (БН-реакторы)</li>
+      <li><b>Билибинская</b> — Чукотка (самая северная!)</li>
+      <li><b>Калининская</b> — Тверская обл. (4000 МВт)</li>
+      <li><b>Кольская</b> — Мурманская обл.</li>
+      <li><b>Курская</b> — 4 блока РБМК-1000</li>
+      <li><b>Ленинградская</b> — 4 блока ВВЭР-1200</li>
+      <li><b>Нововоронежская</b> — первенец ВВЭР</li>
+      <li><b>Ростовская</b> — 4033 МВт</li>
+      <li><b>Смоленская</b> — 3 блока РБМК</li>
+    </ul>
+    <div class="fact">
+      🏗️ Строятся: Курская АЭС-2, Ленинградская АЭС-2, Белорусская АЭС
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🌱 Экология и безопасность</h2>
+    <span class="tag">Плюсы</span>
+    <ul>
+      <li>Низкие выбросы CO₂</li>
+      <li>Компактность (большая мощность на малой площади)</li>
+      <li>Независимость от погоды (в отличие от ВИЭ)</li>
+    </ul>
+    <span class="tag">Минусы / Риски</span>
+    <ul>
+      <li>Радиоактивные отходы (хранение)</li>
+      <li>Аварийный риск: Чернобыль (1986), Фукусима (2011)</li>
+      <li>Тепловое загрязнение водоёмов</li>
+    </ul>
+    <div class="fact">
+      📊 После Фукусимы Германия отказалась от АЭС, а Франция сохранила как базовую
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📝 Заключение (тезисы для ответа)</h2>
+    <ul>
+      <li>АЭС — важный элемент глобальной энергетики (~10% мировой энергии)</li>
+      <li>Размещение у водоёмов, в сейсмически спокойных зонах</li>
+      <li>Россия — 4-е место, развитие ВВЭР и БН-технологий</li>
+      <li>Экологический компромисс: низкий CO₂ vs риски и отходы</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    Шпаргалка по географии · АЭС · 2026
+  </div>
+
+</body>
+</html>
