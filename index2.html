@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Атомная электростанция</title>
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0e0e0e;
+    color: #f0f0f0;
+    overflow-x: hidden;
+}
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100vw);
+}
+
+.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: #00ffff;
+}
+
+p {
+    font-size: 1.2em;
+    max-width: 700px;
+}
+
+.slide img {
+    max-width: 80%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00ffff55;
+}
+
+.nav-buttons {
+    position: fixed;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.nav-buttons button {
+    background-color: #00ffff;
+    border: none;
+    color: #0e0e0e;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.nav-buttons button:hover {
+    background-color: #00bbbb;
+}
+</style>
+</head>
+<body>
+
+<!-- Слайды -->
+<div class="slide active">
+    <h1>Атомная электростанция</h1>
+    <p>Современная энергия из атома: принцип работы и устройство.</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Nuclear_power_plant.svg/800px-Nuclear_power_plant.svg.png" alt="АЭС">
+</div>
+
+<div class="slide hidden">
+    <h1>Принцип работы</h1>
+    <p>Атомная энергия высвобождается при расщеплении ядер урана. Тепло превращается в пар, который вращает турбину, вырабатывая электричество.</p>
+</div>
+
+<div class="slide hidden">
+    <h1>Основные элементы</h1>
+    <p>1. Реактор — место деления ядер.<br>
+       2. Парогенератор — превращает тепло в пар.<br>
+       3. Турбина и генератор — производство электроэнергии.<br>
+       4. Система охлаждения — безопасность.</p>
+</div>
+
+<div class="slide hidden">
+    <h1>Заключение</h1>
+    <p>Атомная энергия играет ключевую роль в энергетике, но требует строгой безопасности и контроля.</p>
+</div>
+
+<!-- Навигация -->
+<div class="nav-buttons">
+    <button id="prev">← Назад</button>
+    <button id="next">Вперед →</button>
+</div>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+let current = 0;
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.add('hidden');
+        slide.classList.remove('active');
+    });
+    slides[index].classList.remove('hidden');
+    slides[index].classList.add('active');
+}
+
+document.getElementById('next').addEventListener('click', () => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+});
+
+document.getElementById('prev').addEventListener('click', () => {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') {
+        current = (current + 1) % slides.length;
+        showSlide(current);
+    }
+    if (e.key === 'ArrowLeft') {
+        current = (current - 1 + slides.length) % slides.length;
+        showSlide(current);
+    }
+});
+</script>
+
+</body>
+</html>
